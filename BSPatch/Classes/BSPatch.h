@@ -1,4 +1,3 @@
-//
 //  BSPatch.h
 //  Pods
 //
