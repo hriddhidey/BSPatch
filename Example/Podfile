@@ -1,0 +1,6 @@
+use_frameworks!
+target 'BSPatch_Tests' do
+  pod 'BSPatch', :path => '../'
+  
+  
+end
