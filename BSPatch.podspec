@@ -21,14 +21,14 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/hriddhidey@gmail.com/BSPatch'
+  s.homepage         = 'https://github.com/hriddhidey/BSPatch'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'hriddhidey@gmail.com' => 'hriddhi.dey@myntra.com' }
-  s.source           = { :git => 'https://github.com/hriddhidey@gmail.com/BSPatch.git', :tag => s.version.to_s }
+  s.author           = { 'Hriddhi Dey' => 'hriddhidey@gmail.com' }
+  s.source           = { :git => 'https://github.com/hriddhidey/BSPatch.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
   s.source_files = 'BSPatch/Classes/**/*'
   
