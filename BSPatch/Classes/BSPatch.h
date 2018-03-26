@@ -10,4 +10,4 @@
 
 
 #endif /* BSPatch_h */
-#import "bspatch.c"
+#import <bspatch.c>

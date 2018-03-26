@@ -10,6 +10,7 @@
 		06CAFBF83897A0FB63B4A21DEC95DC8A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		2D0D70C76F15E4570D0BC15CDC17D7FB /* Pods-BSPatch_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7EB2A8D9E098FC028406213D937CD3 /* Pods-BSPatch_Tests-dummy.m */; };
 		2F07D1602068FD3C00B0DA0B /* bspatch.c in Sources */ = {isa = PBXBuildFile; fileRef = 2F07D15E2068FD3C00B0DA0B /* bspatch.c */; };
+		2FF83A0F20691C020027943F /* bspatch.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FF83A0E20691C020027943F /* bspatch.h */; };
 		3591C1EBFA2BF9AB510CAA5FDC879A54 /* BSPatch-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 843E7DF8923B83988B9A9510FC1A5E9C /* BSPatch-dummy.m */; };
 		9026777DFCBD037A42305881318266B6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		ABDEFA8AE77D6ABA337F976FEF45C5F1 /* BSPatch-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 967290D4503564773C56D1B212BECFD8 /* BSPatch-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -33,6 +34,7 @@
 		2D2AC4142FA4ADEF63C03237DC5A8704 /* BSPatch.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BSPatch.xcconfig; sourceTree = "<group>"; };
 		2F07D15E2068FD3C00B0DA0B /* bspatch.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = bspatch.c; path = BSPatch/Classes/bspatch.c; sourceTree = "<group>"; };
 		2F07D15F2068FD3C00B0DA0B /* bzip2 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = bzip2; path = BSPatch/Classes/bzip2; sourceTree = "<group>"; };
+		2FF83A0E20691C020027943F /* bspatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = bspatch.h; path = BSPatch/Classes/bspatch.h; sourceTree = "<group>"; };
 		503AE12BB035A67F35467EDA189530DB /* BSPatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BSPatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		529FA9F5B6CC71710A383DDB1F53EE9D /* Pods-BSPatch_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BSPatch_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		5339C7515CAC039CDB6A9CC20F3BF8A4 /* BSPatch.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = BSPatch.modulemap; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 		2F07D15D2068FD0200B0DA0B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				2FF83A0E20691C020027943F /* bspatch.h */,
 				2F07D15E2068FD3C00B0DA0B /* bspatch.c */,
 				2F07D15F2068FD3C00B0DA0B /* bzip2 */,
 			);
@@ -189,6 +192,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FF83A0F20691C020027943F /* bspatch.h in Headers */,
 				ABDEFA8AE77D6ABA337F976FEF45C5F1 /* BSPatch-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
