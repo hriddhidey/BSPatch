@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		06CAFBF83897A0FB63B4A21DEC95DC8A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		2D0D70C76F15E4570D0BC15CDC17D7FB /* Pods-BSPatch_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7EB2A8D9E098FC028406213D937CD3 /* Pods-BSPatch_Tests-dummy.m */; };
 		2F07D1602068FD3C00B0DA0B /* bspatch.c in Sources */ = {isa = PBXBuildFile; fileRef = 2F07D15E2068FD3C00B0DA0B /* bspatch.c */; };
 		2FF83A0F20691C020027943F /* bspatch.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FF83A0E20691C020027943F /* bspatch.h */; };
@@ -58,7 +57,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06CAFBF83897A0FB63B4A21DEC95DC8A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
