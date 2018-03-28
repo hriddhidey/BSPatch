@@ -9,4 +9,8 @@
 
 
 #endif /* BSPatch_h */
-#import "bspatch.c"
+
+static off_t offtin(u_char *buf);
+int bspatch_main(int argc,char * argv[]);
+int bspatch (const char *oldApkPath, const char *newApkPath, const char *patchPath);
+

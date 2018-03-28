@@ -743,7 +743,7 @@ void cleanUpAndFail ( Int32 ec )
 
 /*---------------------------------------------*/
 static 
-void panic ( const Char* s )
+void __attribute__((overloadable)) panic ( const Char* s )
 {
    fprintf ( stderr,
              "\n%s: PANIC -- internal consistency error:\n"

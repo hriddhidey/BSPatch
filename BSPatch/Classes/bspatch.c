@@ -45,6 +45,7 @@ __FBSDID("$FreeBSD: src/usr.bin/bsdiff/bspatch/bspatch.c,v 1.1 2005/08/06 01:59:
 #include "bzip2/randtable.c"
 #include "bzip2/blocksort.c"
 #include "bzip2/huffman.c"
+#include "bspatch.h"
 
 static off_t offtin(u_char *buf)
 {
