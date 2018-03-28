@@ -5,11 +5,9 @@
 [![License](https://img.shields.io/cocoapods/l/BSPatch.svg?style=flat)](http://cocoapods.org/pods/BSPatch)
 [![Platform](https://img.shields.io/cocoapods/p/BSPatch.svg?style=flat)](http://cocoapods.org/pods/BSPatch)
 
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
 ## Requirements
+
+Requires only XCode, and CocoaPods.
 
 ## Installation
 
@@ -20,9 +18,27 @@ it, simply add the following line to your Podfile:
 pod 'BSPatch'
 ```
 
-## Author
+Or, reference is from this repository and set the branch to the latest release tag.
 
-hriddhidey@gmail.com, hriddhi.dey@myntra.com
+## Usage
+
+Simply import the library and call the `bspatch()` function.
+```
+#import <BSPatch/BSPatch.h>
+
+...
+...
+
+const char *oldFile = // path to your original file
+const char *newFile = // path to your new file
+const char *patchfile = // patch to your patch file
+int res = bspatch(oldFile, newFile, patchfile);
+// Returns 0 if successful
+if (res != 0) {
+  NSLog(@"Error while patching file. Error status: %@", [@(res) stringValue]);
+  return;
+}
+```
 
 ## License
 
