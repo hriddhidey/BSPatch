@@ -65,7 +65,7 @@ static off_t offtin(u_char *buf)
 	return y;
 }
 
-int bspatch_main(int argc,char * argv[])
+int bspatch_main(int argc,char * ofpath, char * nfpath, char * pfpath )
 {
 	FILE * f, * cpf, * dpf, * epf;
 	BZFILE * cpfbz2, * dpfbz2, * epfbz2;
@@ -79,6 +79,12 @@ int bspatch_main(int argc,char * argv[])
 	off_t ctrl[3];
 	off_t lenread;
 	off_t i;
+    
+    char *argv[4];
+    argv[0] = "bspatch";
+    argv[1] = ofpath;
+    argv[2] = nfpath;
+    argv[3] = pfpath;
 
 	if(argc!=4) errx(1,"usage: %s oldfile newfile patchfile\n",argv[0]);
 
@@ -204,6 +210,9 @@ int bspatch_main(int argc,char * argv[])
 		err(1, "fclose(%s)", argv[3]);
 
 	/* Write the new file */
+    fd = open(argv[2],O_CREAT|O_TRUNC|O_WRONLY,0666);
+    write(fd, "\xef\xbb\xbf", 3);
+    close(fd);
 	if(((fd=open(argv[2],O_CREAT|O_TRUNC|O_WRONLY,0666))<0) ||
 		(write(fd,new,newsize)!=newsize) || (close(fd)==-1))
 		err(1,"%s",argv[2]);
@@ -214,24 +223,8 @@ int bspatch_main(int argc,char * argv[])
 	return 0;
 }
 
-// int bspatch (JNIEnv *env, jclass type, jstring oldFilePath_, jstring newFilePath_, jstring patchPath_) {
+
 int bspatch (const char *oldApkPath, const char *newApkPath, const char *patchPath) {
-    //    const char *oldApkPath = (*env)->GetStringUTFChars(env, oldFilePath_, 0);
-    //    const char *newApkPath = (*env)->GetStringUTFChars(env, newFilePath_, 0);
-    //    const char *patchPath = (*env)->GetStringUTFChars(env, patchPath_, 0);
-    
-    int argc = 4;
-    char* argv[4];
-    argv[0] = "bspatch";
-    argv[1] = oldApkPath;
-    argv[2] = newApkPath;
-    argv[3] = patchPath;
-    
-    int ret = bspatch_main(argc, argv);
-    
-//    (*env)->ReleaseStringUTFChars(env, oldFilePath_, oldApkPath);
-//    (*env)->ReleaseStringUTFChars(env, newFilePath_, newApkPath);
-//    (*env)->ReleaseStringUTFChars(env, patchPath_, patchPath);
-    
+    int ret = bspatch_main(4, oldApkPath, newApkPath, patchPath);
     return ret;
 }
