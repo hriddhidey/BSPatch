@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BSPatch'
-  s.version          = '0.5.0'
+  s.version          = '1.0.0'
   s.summary          = 'BSPatch pod library for iOS applications.'
 
 # This description is used to generate tags and improve search results.
